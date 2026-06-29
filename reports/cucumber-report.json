@@ -1,0 +1,76 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "login with valid credentials",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "launch the application",
+            "match": {
+              "location": "Features\\Steps\\loginSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7345583000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter valid credentials",
+            "match": {
+              "location": "Features\\Steps\\loginSteps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 413236100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click the login button",
+            "match": {
+              "location": "Features\\Steps\\loginSteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 198452600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should be redirected to the dashboard page",
+            "match": {
+              "location": "Features\\Steps\\loginSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3064876500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
