@@ -36,3 +36,8 @@ Then('I should be redirected to the dashboard page', async function () {
         console.log("Title of the page:", title);
         expect(title).toBe("ProtoCommerce");
 });
+
+when('When I enter admin credentials', async function(){
+  await page.fill("#username", 'adminuser');
+  await page.fill("#password", 'adminuser@830$3mK2');
+})
