@@ -71,4 +71,43 @@ test('@regression @teamB Network mocking and Interception', async({ page }) => {
     console.log('Title and Body:', titleAndBody);
 });
 
+test('@regression @teamA PUT API test', async({ request }) => {
+
+  const payload = {
+    id: 1,
+    title: 'updated title',
+    body: 'updated body',
+    userId: 1
+  };
+
+  const response = await request.put('https://jsonplaceholder.typicode.com/posts/1', { data: payload });
+  const body = await response.json();
+  console.log('PUT response:', body);
+
+  expect(response.status()).toBe(200);
+  expect(body).toMatchObject(payload);
+});
+
+test('@regression @teamA PATCH API test', async({ request }) => {
+
+  const payload = {
+    title: 'patched title'
+  };
+
+  const response = await request.patch('https://jsonplaceholder.typicode.com/posts/1', { data: payload });
+  const body = await response.json();
+  console.log('PATCH response:', body);
+
+  expect(response.status()).toBe(200);
+  expect(body).toMatchObject(payload);
+});
+
+test('@regression @teamA DELETE API test', async({ request }) => {
+
+  const response = await request.delete('https://jsonplaceholder.typicode.com/posts/1');
+  console.log('DELETE status:', response.status());
+
+  expect([200, 204]).toContain(response.status());
+});
+
 });
